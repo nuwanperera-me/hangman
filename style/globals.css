@@ -11,9 +11,6 @@ body {
   background-color: #fafafa;
 }
 
-h1 {
-}
-
 main {
   width: 100%;
   min-height: 100vh;
@@ -70,7 +67,8 @@ main {
   flex-direction: column;
   z-index: 2;
   border: 0;
-  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+    drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
   border-radius: 4px;
   transition: all 0.3s ease;
 }
@@ -143,7 +141,7 @@ main {
 }
 
 .icon:hover {
-  color: #dc2626;  
+  color: #dc2626;
 }
 
 .container > button {
@@ -186,7 +184,7 @@ footer p {
 
 footer a {
   color: #525252;
-  font-weight:600;
+  font-weight: 600;
   text-decoration: none;
 }
 

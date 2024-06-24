@@ -7,10 +7,14 @@ import Keyboard from "./components/keyboard";
 import PopUp from "./components/pop-up";
 
 export default function App() {
-  const [wordToGuess, setWordToGuess] = useState<string>(() => {
+  function getWrod() {
     const randomIndex = Math.floor(Math.random() * words.length);
     return words[randomIndex];
-  });
+  }
+
+  const [wordToGuess, setWordToGuess] = useState<string>(
+    getWrod().toLowerCase()
+  );
 
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
   const inCorrectLetters = guessedLetters.filter(
@@ -65,7 +69,12 @@ export default function App() {
             <p>
               The word was <span>{wordToGuess}</span>.
             </p>
-            <button onClick={() => window.location.reload()}>
+            <button
+              onClick={() => {
+                setGuessedLetters([]);
+                setWordToGuess(getWrod());
+              }}
+            >
               <span style={{ display: "flex" }}>
                 <ArrowPathIcon
                   style={{
@@ -86,7 +95,12 @@ export default function App() {
           <div className="pop-up-content">
             <h2>Congradulations</h2>
             <p>You Won!</p>
-            <button onClick={() => window.location.reload()}>
+            <button
+              onClick={() => {
+                setGuessedLetters([]);
+                setWordToGuess(getWrod());
+              }}
+            >
               <span style={{ display: "flex" }}>
                 <ArrowPathIcon
                   className="icon"
@@ -115,7 +129,12 @@ export default function App() {
             addGuessedLetter={addGuessedLetter}
           />
 
-          <button onClick={() => window.location.reload()}>
+          <button
+            onClick={() => {
+              setGuessedLetters([]);
+              setWordToGuess(getWrod());
+            }}
+          >
             <span style={{ display: "flex", gap: "8px" }}>
               <ForwardIcon
                 style={{

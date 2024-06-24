@@ -18,7 +18,7 @@ export default function Keyboard({
   return (
     <div className="keyboard-container">
       <div className="keyboard-row">
-      {keySet1.map((key) => {
+        {keySet1.map((key) => {
           const isActive = activeLetters.includes(key);
           const isDisabled = inactiveLetters.includes(key);
           return (
@@ -30,17 +30,13 @@ export default function Keyboard({
               key={key}
               disabled={isActive || isDisabled}
             >
-              <span
-                className={`key`}
-              >
-                {key}
-              </span>
+              <span className={`key`}>{key}</span>
             </button>
           );
         })}
       </div>
       <div className="keyboard-row">
-      {keySet2.map((key) => {
+        {keySet2.map((key) => {
           const isActive = activeLetters.includes(key);
           const isDisabled = inactiveLetters.includes(key);
           return (
@@ -52,17 +48,13 @@ export default function Keyboard({
               key={key}
               disabled={isActive || isDisabled}
             >
-              <span
-                className={`key`}
-              >
-                {key}
-              </span>
+              <span className={`key`}>{key}</span>
             </button>
           );
         })}
       </div>
       <div className="keyboard-row ">
-      {keySet3.map((key) => {
+        {keySet3.map((key) => {
           const isActive = activeLetters.includes(key);
           const isDisabled = inactiveLetters.includes(key);
           return (
@@ -74,11 +66,7 @@ export default function Keyboard({
               key={key}
               disabled={isActive || isDisabled}
             >
-              <span
-                className={`key`}
-              >
-                {key}
-              </span>
+              <span className={`key`}>{key}</span>
             </button>
           );
         })}

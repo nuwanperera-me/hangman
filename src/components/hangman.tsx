@@ -20,7 +20,7 @@ export default function Hangman({ numberOfGuesses }: HangmanProps) {
   const parts = [Head, Body, RightArm, LeftArm, RightLeg, LeftLeg];
 
   return (
-    <div style={{ width: "320px"}}>
+    <div style={{ width: "320px" }}>
       <div className="hangman-container">
         {parts.slice(0, numberOfGuesses).map((Part, index) => (
           <Part key={index} />
